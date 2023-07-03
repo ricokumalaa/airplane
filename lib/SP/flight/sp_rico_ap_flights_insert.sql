@@ -1,0 +1,61 @@
+CREATE OR REPLACE PROCEDURE sp_rico_ap_flights_insert
+(
+    out_code                        OUT NUMBER,
+    out_msg                         OUT VARCHAR2,
+    in_airplane_id                  IN rico_ap_flights.airplane_id%TYPE,
+    in_origin                       IN rico_ap_flights.origin%TYPE,
+    in_destination                  IN rico_ap_flights.destination%TYPE,
+    in_departure_time               IN rico_ap_flights.departure_time%TYPE,
+    in_arrival_time                 IN rico_ap_flights.arrival_time%TYPE,
+    in_duration_time                IN rico_ap_flights.duration_time%TYPE,
+    in_available_baggage            IN rico_ap_flights.available_baggage%TYPE,
+    in_adult_price                  IN rico_ap_flights.adult_price%TYPE,
+    in_child_price                  IN rico_ap_flights.child_price%TYPE,
+    in_baggage_price                IN rico_ap_flights.baggage_price%TYPE,
+    in_create_by                    IN rico_ap_flights.create_by%TYPE
+)
+AS
+    v_count NUMBER := 0;
+    v_temp NUMBER := 0;
+BEGIN
+    out_code := 0;
+	out_msg := 'OK';
+
+    INSERT INTO rico_ap_flights
+    (
+        id,
+        airplane_id,
+        origin,
+        destination,
+        departure_time,
+        arrival_time,
+        duration_time,
+        available_baggage,
+        adult_price,
+        child_price,
+        baggage_price,
+        create_by,
+        create_time,
+        status
+    )
+    VALUES
+    (
+        seq_rico_ap_flights_id.NEXTVAL,
+        in_airplane_id,
+        in_origin,
+        in_destination,
+        in_departure_time,
+        in_arrival_time,
+        in_duration_time,
+        in_available_baggage,
+        in_adult_price,
+        in_child_price,
+        in_baggage_price,
+        in_create_by,
+        SYSDATE,
+        1
+    );
+
+END;
+/
+SHOW ERRORS;

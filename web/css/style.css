@@ -1,0 +1,114 @@
+.navbar-nav .dropdown-menu a:hover{
+    background-color: #E7F2FF;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.text-alert{
+    font-size: 13px;
+}
+
+/* login page */
+.logo-wrapper{
+    max-width: 15%;
+}
+
+#loginBackground{
+    height: calc(100vh - 56px);
+}
+
+.login-wrapper{
+    /* border: 1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 500px;
+    height: auto;
+}
+/* end of login page */
+
+/* start of user page */
+#addUser,
+#addAirplane,
+#addSeat,
+#addFlight,
+#addPayment{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    transition: transform .2s;
+}
+
+#addUser:hover,
+#addAirplane:hover,
+#addSeat:hover,
+#addFlight:hover,
+#addPayment:hover{
+    transform: scale(1.07);
+}
+/* end of user page */
+
+/* start of multi select dropdown */
+#inputSeatType,
+#inputEditSeatType,
+#inputBookSeatType{
+    max-width: 100%;
+}
+
+.vscomp-toggle-button{
+    border-radius: 0.375rem;
+    width: 100%;
+}
+
+/* end of multi select dropdown */
+
+/* seat map */
+
+.cockpit-wrapper{
+    background-color: #DDE2EE;
+}
+
+/* seat map */
+.showcase-wrapper ul{
+    list-style-type: none;
+}
+
+.seats{
+    cursor: pointer;
+}
+
+.pick-seat{
+    border: 2px solid #0D6EFD !important;
+}
+
+.booked{
+    --bs-bg-opacity: .5;
+}
+
+#cek{
+    border: 1px solid black;
+    max-height: 40px;
+    max-width: 100px;
+}
+
+.btn-color{
+    background-color: #0D6EFD;
+}
+
+.shadow-btn{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.dataTables_wrapper .myfilter .dataTables_filter{
+    float:left;
+    margin-bottom: 10px;
+}
+.dataTables_wrapper .mylength .dataTables_length{float:right}
